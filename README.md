@@ -14,7 +14,7 @@ I've created this for myself so it will inevitably lack something you need, and 
 
 ### 📄 Instructions
 
-You will need [node.js](https://nodejs.org/en/), [yarn](https://yarnpkg.com/en/), and [docker](https://docs.docker.com/compose/install/) installed in order to use this.
+You will need [node.js](https://nodejs.org/en/), [yarn](https://yarnpkg.com/en/), [docker, and docker-compose](https://docs.docker.com/compose/install/) installed in order to use this.
 
 #### Install Dependencies
 
@@ -26,7 +26,7 @@ You will need [node.js](https://nodejs.org/en/), [yarn](https://yarnpkg.com/en/)
 
 #### Stop wordpress server
 
-`yarn sever:down`
+`yarn server:down`
 
 #### Delete wordpress and database
 
