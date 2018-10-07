@@ -1,0 +1,60 @@
+{
+  "name": "es6-sass-hotreloading-docker-wordpress-theme",
+  "version": "1.0.0",
+  "description": "ES6 + SASS + Hot Reloading + Docker + Wordpress Theme",
+  "main": "index.js",
+  "author": "anthify <anthony.thomas.oneill@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp dev",
+    "server:up": "docker-compose up -d",
+    "server:down": "docker-compose down",
+    "server:wipe": "docker-compose down --volumes"
+  },
+  "engines": {
+    "node": "9.10.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.24.7",
+    "browserify": "^16.2.2",
+    "del": "^3.0.0",
+    "eslint": "^5.5.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.2",
+    "prettier": "1.14.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}
