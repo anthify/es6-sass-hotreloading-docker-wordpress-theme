@@ -128,8 +128,8 @@ export function imagesDev() {
 
 export function gulplisten() {
   gulp.watch(paths.styles.src, stylesDev);
-  gulp.watch(paths.scripts.dev, scripts);
-  gulp.watch([paths.root.src]).on("change", copyDev);
+  gulp.watch([paths.scripts.dev], scripts);
+  gulp.watch(paths.root.src).on("change", copyDev);
   gulp.watch([paths.images.src], imagesDev);
 }
 
