@@ -1,0 +1,43 @@
+
+
+/**
+* Settings: Colors, Media Queries
+*/
+@import 'settings/_settings.scss';
+
+
+/**
+* Tools: Mixin Functions
+*/
+@import 'tools/_tools.scss';
+
+
+/**
+* Generic: Reset normalize or HTML5 reset.
+*/
+@import 'generic/_generic.scss';
+
+
+/**
+* Base: Typography settings live...
+*/
+@import 'base/_base.scss';
+
+
+/**
+* Objects: Layout Patterns
+*/
+@import 'objects/_objects.scss';
+
+
+/**
+* Components: Aesthetic styling for reusable
+* chunks of HTML
+*/
+@import 'components/_components.scss';
+
+
+/**
+* If all else fails...
+*/
+@import 'trumps/_trumps.scss';

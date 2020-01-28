@@ -1,0 +1,37 @@
+
+/**
+* Calculates Rem
+*/
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+  }
+  
+  
+  /**
+  * Returns font-size with rem value
+  */
+  @mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+  }
+  
+  
+  /**
+  * Return line-height with rem value
+  */
+  @mixin line-height($size) {
+    line-height: $size;
+    line-height: calculateRem($size);
+  }
+  
+  
+  /**
+  * Returns content wrapped media query
+  */
+  
+  @mixin media($width) {
+    @media only screen and (min-width: $width) {
+      @content;
+    }
+  }

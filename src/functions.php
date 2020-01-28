@@ -40,8 +40,16 @@
     // ---------------------------------
     function theme_styles() {
         wp_enqueue_style(
-            'theme-styles', 
+            'config-styles', 
             get_stylesheet_uri(), 
+            array(),
+            false,
+            'all'
+        );
+
+        wp_enqueue_style(
+            'theme-styles', 
+            get_template_directory_uri() . '/theme.css', 
             array(),
             false,
             'all'

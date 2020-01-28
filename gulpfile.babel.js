@@ -17,7 +17,9 @@ const { reload } = browserSync;
 
 const paths = {
   styles: {
-    src: "src/css/sass/style.scss",
+    wp: "src/style.css",
+    src: "src/css/sass/theme.scss",
+    dev: "src/css/sass/**/*.scss",
     dest: "dist/"
   },
   scripts: {
@@ -55,7 +57,7 @@ export function styles() {
     .pipe(cleanCSS())
     .pipe(
       rename({
-        basename: "style"
+        basename: "theme"
       })
     )
     .pipe(gulp.dest(paths.styles.dest));
@@ -68,7 +70,7 @@ export function stylesDev() {
     .pipe(cleanCSS())
     .pipe(
       rename({
-        basename: "style"
+        basename: "theme"
       })
     )
     .pipe(gulp.dest(paths.styles.dest))
@@ -96,7 +98,7 @@ export function minifyScripts() {
 
 export function copy() {
   return gulp
-    .src(paths.root.src, {
+    .src([...paths.root.src, paths.styles.wp], {
       base: "src"
     })
     .pipe(gulp.dest(paths.root.dest));
@@ -127,7 +129,7 @@ export function imagesDev() {
 }
 
 export function gulplisten() {
-  gulp.watch(paths.styles.src, stylesDev);
+  gulp.watch(paths.styles.dev, stylesDev);
   gulp.watch([paths.scripts.dev], scripts);
   gulp.watch(paths.root.src).on("change", copyDev);
   gulp.watch([paths.images.src], imagesDev);
@@ -135,7 +137,7 @@ export function gulplisten() {
 
 export function server() {
   browserSync.init(paths.root.files, {
-    proxy: "localhost:8800",
+    proxy: "localhost:8100",
     ghostMode: false
   });
 
