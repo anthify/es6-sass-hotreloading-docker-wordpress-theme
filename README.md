@@ -20,7 +20,7 @@ You will need [node.js](https://nodejs.org/en/), [yarn](https://yarnpkg.com/en/)
 
 `yarn install`
 
-#### Run WordPress server and/or wordpress installation
+#### Run WordPress server and/or WordPress installation
 
 `yarn server:up`
 
