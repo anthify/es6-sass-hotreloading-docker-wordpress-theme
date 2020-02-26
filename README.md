@@ -1,4 +1,4 @@
-# ES6 + SASS + Hot Reloading + Docker + Wordpress Theme
+# ES6 + SASS + Hot Reloading + Docker + WordPress Theme
 
 ![alt text](src/img/logo.png "The Great Blank")
 
@@ -6,7 +6,7 @@
 
 ![alt text](src/screenshot.png "The Great Blank")
 
-A quick start _blank_ template for wordpress with a bunch of development features.
+A quick start _blank_ template for WordPress with a bunch of development features.
 
 ### ⚠️ Warning
 
@@ -20,15 +20,15 @@ You will need [node.js](https://nodejs.org/en/), [yarn](https://yarnpkg.com/en/)
 
 `yarn install`
 
-#### Run wordpress server and/or wordpress installation
+#### Run WordPress server and/or wordpress installation
 
 `yarn server:up`
 
-#### Stop wordpress server
+#### Stop WordPress server
 
 `yarn server:down`
 
-#### Delete wordpress and database
+#### Delete WordPress and database
 
 `yarn server:wipe`
 
